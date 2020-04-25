@@ -16,8 +16,8 @@ before_install:
   - gcloud container clusters get-credentials cluster-1 	
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t giacomopetru/react-test -f ./client/Dockerfile.dev ./client
-script:
-  - docker run -e CI=true  giacomopetru/react-test npm run test 
+# script:
+#   - docker run -e CI=true  giacomopetru/react-test npm run test 
 
 deploy:
   provider: script
