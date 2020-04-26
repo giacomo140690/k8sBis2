@@ -10,7 +10,7 @@ docker push giacomopetru/multi-client:$SHA
 docker push giacomopetru/multi-server:$SHA
 docker push giacomopetru/multi-worker:$SHA
 
-# kubectl apply -f k8sBis
+kubectl apply -f k8sBis
 # kubectl set image deployments/server-deployment server=giacomopetru/multi-server:$SHA
 # kubectl set image deployments/client-deployment client=giacomopetru/multi-client:$SHA
 # kubectl set image deployments/worker-deployment worker=giacomopetru/multi-worker:$SHA
